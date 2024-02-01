@@ -252,7 +252,7 @@ const AdminDashboard = () => {
               <option value="All">All</option>
               <option value="Pending">Pending</option>
               <option value="Resolved">Resolved</option>
-              <option value="Closed">Closed</option>
+              <option value="Resolving">Resolving</option>
             </select>
           </div>
           {updateMessage && (
@@ -260,6 +260,7 @@ const AdminDashboard = () => {
                 {updateMessage}
               </div>
             )}
+          <div className='scrollable-table'>
           <table>
             <thead>
               <tr>
@@ -290,7 +291,7 @@ const AdminDashboard = () => {
                         <select value={doubt.status} onChange={(e) => handleStatusChange(doubt.id, e.target.value)}>
                           <option value="Pending">Pending</option>
                           <option value="Resolved">Resolved</option>
-                          <option value="Closed">Closed</option>
+                          <option value="Resolving">Resolving</option>
                         </select>
                       </div>
                   </td>
@@ -298,6 +299,7 @@ const AdminDashboard = () => {
               ))}
             </tbody>
           </table>
+          </div>
         </div>
       )}
     </div>
